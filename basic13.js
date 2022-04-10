@@ -179,4 +179,4 @@ testArr = [0, 5, 16, 1, 4, 602, 15, 11, -51];
 
 // console.log(zeroOutArrayNegativeVals(testArr));
 
-console.log(shiftArrayValsLeft(testArr));
+// console.log(shiftArrayValsLeft(testArr));
