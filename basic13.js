@@ -140,11 +140,14 @@ function zeroOutArrayNegativeVals(arr) {
 
 function shiftArrayValsLeft(arr){
     var temp = 0;
-    for(var i=arr.length-1; i=0; i--){
-        temp = arr[i]
-        arr[i]
-
+    for(var i=0; i<arr.length; i++){
+        arr[i] = arr[i+1]
+        console.log(arr)
+        if(arr[i]==undefined){
+            arr[i] = 0;
+        }
     }
+    return arr
 }
 
 
@@ -176,4 +179,4 @@ testArr = [0, 5, 16, 1, 4, 602, 15, 11, -51];
 
 // console.log(zeroOutArrayNegativeVals(testArr));
 
-shiftArrayValsLeft(testArr);
+console.log(shiftArrayValsLeft(testArr));
