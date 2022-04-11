@@ -8,40 +8,78 @@
 
 // (optional) Create epic text-art Empire vs. Rebellion battle scenes, with ships like (=*=)and >o<.
 
-function drawLeftStars(num){
-    textField =75;
-    for(var j=0; j<num;j++){
+function drawLeftStars(num) {
+    textField = 75;
+    for (var j = 0; j < num; j++) {
         console.log("*")
     }
 }
 
-function drawRightStars(num){
-    textField =75;
-    for(var i=0; i<textField-num; i++){
+function drawRightStars(num) {
+    textField = 75;
+    for (var i = 0; i < textField - num; i++) {
         console.log(" ")
     }
-    for(var j=0; j<num;j++){
+    for (var j = 0; j < num; j++) {
         console.log("*")
     }
 }
 
-function drawCenteredStars(num){
-    textField =75;
-    centered = num/2;
-    for(var j=0; j<centered;j++){
+function drawCenteredStars(num) {
+    textField = 75;
+    centered = num / 2;
+    for (var j = 0; j < centered; j++) {
         console.log(" ")
     }
-    for(var h=centered; h<textField-num;h++){
+    for (var h = centered; h < textField - num; h++) {
         console.log("*")
     }
-    for(var i=textField-centered; i<textField; i++){
+    for (var i = textField - centered; i < textField; i++) {
         console.log(" ")
     }
 }
 
 rand = Math.random() * 75;
 
-drawLeftStars(10);
-drawRightStars(rand);
-drawCenteredStars(25);
-console.log(rand);
+// drawLeftStars(10);
+// drawRightStars(rand);
+// drawCenteredStars(25);
+// console.log(rand);
+
+
+// From the above, derive the following that accept and draw the given characters, not just asterisks:
+
+function drawLeftChars(num, char) {
+    textField = 75;
+    for (var j = 0; j < num; j++) {
+        console.log(char)
+    }
+}
+
+function drawRightChars(num, char){
+    textField = 75;
+    for (var i = 0; i < textField - num; i++) {
+        console.log(" ")
+    }
+    for (var j = 0; j < num; j++) {
+        console.log(char)
+    }
+}
+
+function drawCenteredChars(num, char){
+    textField = 75;
+    centered = num / 2;
+    for (var j = 0; j < centered; j++) {
+        console.log(" ")
+    }
+    for (var h = centered; h < textField - num; h++) {
+        console.log(char)
+    }
+    for (var i = textField - centered; i < textField; i++) {
+        console.log(" ")
+    }
+}
+
+drawLeftChars(15, ">.<");
+drawRightChars(3, "heyo");
+drawCenteredChars(rand, "!!!!!!!!!!!!");
