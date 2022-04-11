@@ -13,9 +13,35 @@ function drawLeftStars(num){
     for(var j=0; j<num;j++){
         console.log("*")
     }
+}
+
+function drawRightStars(num){
+    textField =75;
     for(var i=0; i<textField-num; i++){
-        console.log(i)
+        console.log(" ")
+    }
+    for(var j=0; j<num;j++){
+        console.log("*")
     }
 }
 
+function drawCenteredStars(num){
+    textField =75;
+    centered = num/2;
+    for(var j=0; j<centered;j++){
+        console.log(" ")
+    }
+    for(var h=centered; h<textField-num;h++){
+        console.log("*")
+    }
+    for(var i=textField-centered; i<textField; i++){
+        console.log(" ")
+    }
+}
+
+rand = Math.random() * 75;
+
 drawLeftStars(10);
+drawRightStars(rand);
+drawCenteredStars(25);
+console.log(rand);
